@@ -3,6 +3,7 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -10,11 +11,20 @@ module.exports = {
   },
   plugins: [
     new DashboardPlugin()
-],
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['eslint-loader']
+      }
+    ]
+  },
 
-devServer: {
-	contentBase: path.join(__dirname, "dist"),
-	compress: true,
-	port: 9000
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
   }
 };

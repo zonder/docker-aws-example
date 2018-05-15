@@ -1,1 +1,1 @@
-import path from 'path';
+console.log('THIS IS TEST');

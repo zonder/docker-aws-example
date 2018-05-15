@@ -296,5 +296,5 @@ $RECYCLE.BIN/
 .vs/restore.dg
 
 
-dist/
+dist/*.js
 package-lock.json

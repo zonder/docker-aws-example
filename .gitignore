@@ -294,3 +294,7 @@ $RECYCLE.BIN/
 # dotnet core
 **/project.lock.json
 .vs/restore.dg
+
+
+dist/
+package-lock.json

@@ -2,10 +2,20 @@
   "name": "docker-aws-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dashboard -- node index.js",
+    "start:dev": "webpack-dev-server"
+
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dashboard": "^1.1.1",
+    "webpack-dev-server": "^3.1.4"
+  }
 }
